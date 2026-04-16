@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="02/27/26||04:39:19" using="Simscape Multibody Link Version 7.4" from="SolidWorks 33.1.2"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="3 needle mechanism" uid="3 needle mechanism" version="283">
+<AssemblyFile name="3 needle mechanism.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="pin pather-1" uid="pin pather-1" entityUid="pin pather*:*Default">
+<Transform>
+<Rotation>0 0.10849442609011695 -0.99409705738794751 0 0.99409705738794762 0.10849442609011693 0.99999999999999989 0 0</Rotation>
+<Translation>0.69708539001126502 0.92745787932045776 1.2826939345274786</Translation>
+</Transform>
+</Instance>
+<Instance name="simple-1" uid="simple-1" grounded="true" entityUid="simple*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.63682228259503604 0.86149242412464377 1.2857439345274784</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.69999999999999996" g="0.69999999999999996" b="0.69999999999999996" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="hand trigger-1" uid="hand trigger-1" entityUid="hand trigger*:*Default">
+<Transform>
+<Rotation>-0.27294272071916209 0.96203028601308671 -2.1792250267485042e-16 0.96203028601308671 0.27294272071916209 2.0471811898773546e-16 2.5642539134783482e-16 -1.5377172719995233e-16 -0.99999999999999989</Rotation>
+<Translation>0.82202335308169217 0.8762233879366641 1.2957439345274782</Translation>
+</Transform>
+</Instance>
+<Instance name="link pin-1" uid="link pin-1" entityUid="link pin*:*Default">
+<Transform>
+<Rotation>0.99330461264994896 0.11552465749066247 0 -0.11552465749066247 0.99330461264994896 0 0 0 1</Rotation>
+<Translation>0.69708539001126513 0.92745787932045776 1.2900934697063275</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.69999999999999996" g="0.69999999999999996" b="0.69999999999999996" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Parallel name="Parallel1">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>simple-1</Uid>
+</InstancePath>
+<Position>0 0 0.0020000000000000018</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pin pather-1</Uid>
+</InstancePath>
+<Position>0.0051000000000001044 0.0024999999999999467 0</Position>
+<Axis>-0.99999999999999989 0 0</Axis>
+</ConstraintGeometry>
+</Parallel>
+<UnknownConstraint name="PathMate2">
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>pin pather-1</Uid>
+</InstancePath>
+<Position>0.004049999999999887 0 0</Position>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="Unknown">
+<InstancePath>
+<Uid>3 needle mechanism</Uid>
+</InstancePath>
+</ConstraintGeometry>
+</UnknownConstraint>
+<Concentric name="Concentric1">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>simple-1</Uid>
+</InstancePath>
+<Position>0.11499999999999999 0.010000000000000009 0.014999999999999902</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>hand trigger-1</Uid>
+</InstancePath>
+<Position>0.014609540706829405 -0.068826838053177464 -0.010013878188660064</Position>
+<Axis>0 0 0.99999999999999989</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric2">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pin pather-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>-0.99999999999999989 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>link pin-1</Uid>
+</InstancePath>
+<Position>0 0 0.0020000000000000018</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident4">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pin pather-1</Uid>
+</InstancePath>
+<Position>0.0073995351788489483 0.0024999999999999467 0</Position>
+<Axis>0.99999999999999989 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>link pin-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Distance name="Distance2">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>hand trigger-1</Uid>
+</InstancePath>
+<Position>0.054776958334262882 -0.081579058264804938 0.00099999999999988987</Position>
+<Axis>0 0 0.99999999999999989</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>simple-1</Uid>
+</InstancePath>
+<Position>0 0 0.0020000000000000018</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Distance>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+</Assemblies>
+<Parts>
+<Part name="hand trigger" uid="hand trigger*:*Default" version="210">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="hand trigger.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0026176261481842631</Mass>
+<CenterOfMass>0.0098530272163114795 -0.049754169421968537 0.001197974850728427</CenterOfMass>
+<Inertia>5.8274136539250487e-07 3.843961285092269e-07 9.3632470600733274e-07 3.0828184123484621e-08 -5.5076186283146269e-08 2.2992300980077531e-07</Inertia>
+</MassProperties>
+<GeometryFile name="hand trigger_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="link pin" uid="link pin*:*Default" version="118">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="link pin.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00056330176365321639</Mass>
+<CenterOfMass>0.015000000000000001 0 0.001</CenterOfMass>
+<Inertia>3.1929111923387816e-09 5.9107008014312491e-08 6.1924384697549124e-08 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="link pin_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="pin pather" uid="pin pather*:*Default" version="114">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="pin pather.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0011368255341193281</Mass>
+<CenterOfMass>0.0041578305452585592 0 0</CenterOfMass>
+<Inertia>3.0478829343236983e-09 9.7031896430387004e-09 9.7031896430387004e-09 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="pin pather_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.82745098039215681" g="0.66666666666666663" b="0.12941176470588234" a="1"/>
+<Diffuse r="0.82745098039215681" g="0.66666666666666663" b="0.12941176470588234" a="1"/>
+<Specular r="0.5792156862745097" g="0.46666666666666662" b="0.090588235294117636" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="simple" uid="simple*:*Default" version="369">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="simple.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.019839022528249824</Mass>
+<CenterOfMass>0.064009690886632969 0.039009881975872657 0.0010136283588248656</CenterOfMass>
+<Inertia>1.1327261663729499e-05 3.0337590596322462e-05 4.160960758711744e-05 7.8434980373401648e-09 -1.3786419048057266e-08 -4.8329311284273084e-08</Inertia>
+</MassProperties>
+<GeometryFile name="simple_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
